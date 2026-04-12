@@ -1,0 +1,62 @@
+spring:
+  application:
+    name: InfiniteChat-Agent
+  data:
+    redis:
+      host: 134.175.219.78
+      port: 59000
+      password: e65K4t8w2
+      ttl: 3600
+      timeout: 30000
+  mail:
+    host: smtp.qq.com  # 以QQ邮箱为例
+    port: 587
+    username: xxxxxx # 你的发件账号
+    password: xxxxxx # 你的SMTP授权码
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
+server:
+  port: 10010
+  servlet:
+    context-path: /api
+
+
+logging:
+  level:
+    dev.langchain4j.mcp: ERROR
+
+pgvector:
+  database: dp
+  host: 134.175.219.78
+  port : 54328
+  user: root
+  password: e65K4t7z1
+  table: dp_embedding
+
+
+langchain4j:
+  community:
+    dashscope:
+      chat-model:
+        model-name: qwen-max
+        api-key: xxxxxxxxxxxxx
+      streaming-chat-model:
+        model-name: qwen-max
+        api-key: xxxxxxxxxxxxxx
+      embedding-model:
+        model-name: text-embedding-v4
+        api-key: xxxxxxxxxxxxxx
+
+
+bigmodel:
+  api-key: xxxxxxxxxxxxxxxxxxxxx
+
+
+rag:
+  docs-path: xxxxxxxxxxxxxxxxxxxxxxx
